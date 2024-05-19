@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|c:\\users\\danil\\source\\repos\\kurswork\\kurssss\\kurssss\\kurssss.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|solutionrelative:kurssss\\kurssss.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|c:\\users\\danil\\source\\repos\\kurswork\\kurssss\\kurssss\\classmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|solutionrelative:kurssss\\classmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|c:\\users\\danil\\source\\repos\\kurswork\\kurssss\\kurssss\\knapsackstatestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|solutionrelative:kurssss\\knapsackstatestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|c:\\users\\danil\\source\\repos\\kurswork\\kurssss\\kurssss\\knapsackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|solutionrelative:kurssss\\knapsackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|c:\\users\\danil\\source\\repos\\kurswork\\kurssss\\kurssss\\algorithmrealization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|solutionrelative:kurssss\\algorithmrealization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|c:\\users\\danil\\source\\repos\\kurswork\\kurssss\\kurssss\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|solutionrelative:kurssss\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|c:\\users\\danil\\source\\repos\\kurswork\\kurssss\\kurssss\\algorithm_parameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|solutionrelative:kurssss\\algorithm_parameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|c:\\users\\danil\\source\\repos\\kurswork\\kurssss\\kurssss\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3C1D750-EACC-465F-9E5D-FB08B7669307}|Kurssss\\Kurssss.csproj|solutionrelative:kurssss\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClassManager.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\ClassManager.cs",
+              "RelativeDocumentMoniker": "Kurssss\\ClassManager.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\ClassManager.cs",
+              "RelativeToolTip": "Kurssss\\ClassManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:42:59.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Kurssss.csproj",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Kurssss.csproj",
+              "RelativeDocumentMoniker": "Kurssss\\Kurssss.csproj",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Kurssss.csproj",
+              "RelativeToolTip": "Kurssss\\Kurssss.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-19T09:42:59.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KnapsackStateStorage.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\KnapsackStateStorage.cs",
+              "RelativeDocumentMoniker": "Kurssss\\KnapsackStateStorage.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\KnapsackStateStorage.cs",
+              "RelativeToolTip": "Kurssss\\KnapsackStateStorage.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:42:59.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KnapsackState.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\KnapsackState.cs",
+              "RelativeDocumentMoniker": "Kurssss\\KnapsackState.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\KnapsackState.cs",
+              "RelativeToolTip": "Kurssss\\KnapsackState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:42:59.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Item.cs",
+              "RelativeDocumentMoniker": "Kurssss\\Item.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Item.cs",
+              "RelativeToolTip": "Kurssss\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:42:59.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AlgorithmRealization.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\AlgorithmRealization.cs",
+              "RelativeDocumentMoniker": "Kurssss\\AlgorithmRealization.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\AlgorithmRealization.cs",
+              "RelativeToolTip": "Kurssss\\AlgorithmRealization.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:42:59.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Algorithm_Parameters.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Algorithm_Parameters.cs",
+              "RelativeDocumentMoniker": "Kurssss\\Algorithm_Parameters.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Algorithm_Parameters.cs",
+              "RelativeToolTip": "Kurssss\\Algorithm_Parameters.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:42:59.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Form1.cs",
+              "RelativeDocumentMoniker": "Kurssss\\Form1.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Form1.cs",
+              "RelativeToolTip": "Kurssss\\Form1.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:42:59.564Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
