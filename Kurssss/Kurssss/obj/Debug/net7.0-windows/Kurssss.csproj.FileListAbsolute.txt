@@ -1,0 +1,8 @@
+C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.csproj.AssemblyReference.cache
+C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.FormKnapsack.resources
+C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.FormKnapsackInput.resources
+C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.csproj.GenerateResource.cache
+C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.AssemblyInfoInputs.cache
+C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.AssemblyInfo.cs
+C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.csproj.CoreCompileInputs.cache

@@ -1,10 +1,15 @@
-namespace Kurssss
+namespace Kurssss;
+
+public partial class FormKnapsackInput : System.Windows.Forms.Form
 {
-    public partial class FormKnapsackInput : System.Windows.Forms.Form
+    private event Action<int>? _setSizeDelegate;
+    public FormKnapsackInput()
     {
-        public FormKnapsackInput()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
+
+    public void AddEvent(Action<int> setSizeDelegate)
+    {
+        _setSizeDelegete
     }
 }
