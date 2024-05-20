@@ -30,9 +30,9 @@
         {
             pictureBox = new PictureBox();
             groupBoxTools = new GroupBox();
-            buttonSetCapacity = new Button();
-            buttonAddItem = new Button();
             button1 = new Button();
+            buttonAddItem = new Button();
+            buttonSetCapacity = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBoxTools.SuspendLayout();
             SuspendLayout();
@@ -58,15 +58,14 @@
             groupBoxTools.TabStop = false;
             groupBoxTools.Text = "Инструменты";
             // 
-            // buttonSetCapacity
+            // button1
             // 
-            buttonSetCapacity.Location = new Point(6, 22);
-            buttonSetCapacity.Name = "buttonSetCapacity";
-            buttonSetCapacity.Size = new Size(188, 34);
-            buttonSetCapacity.TabIndex = 0;
-            buttonSetCapacity.Text = "Задать вместимость рюкзака";
-            buttonSetCapacity.UseVisualStyleBackColor = true;
-            buttonSetCapacity.Click += buttonSetCapacity_Click;
+            button1.Location = new Point(6, 180);
+            button1.Name = "button1";
+            button1.Size = new Size(188, 40);
+            button1.TabIndex = 2;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // buttonAddItem
             // 
@@ -76,15 +75,17 @@
             buttonAddItem.TabIndex = 1;
             buttonAddItem.Text = "Добавить предмет";
             buttonAddItem.UseVisualStyleBackColor = true;
+            buttonAddItem.Click += buttonAddItem_Click;
             // 
-            // button1
+            // buttonSetCapacity
             // 
-            button1.Location = new Point(6, 180);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 40);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            buttonSetCapacity.Location = new Point(6, 22);
+            buttonSetCapacity.Name = "buttonSetCapacity";
+            buttonSetCapacity.Size = new Size(188, 34);
+            buttonSetCapacity.TabIndex = 0;
+            buttonSetCapacity.Text = "Задать вместимость рюкзака";
+            buttonSetCapacity.UseVisualStyleBackColor = true;
+            buttonSetCapacity.Click += buttonSetCapacity_Click;
             // 
             // FormKnapsack
             // 

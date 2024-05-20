@@ -8,7 +8,7 @@ namespace Kurssss;
 
 public enum EnumOperations
 {
-    Add,
+    AddItem,
     Remove,
     SetCapacity,
     None,

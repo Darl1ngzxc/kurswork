@@ -6,3 +6,13 @@ C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Ku
 C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.AssemblyInfoInputs.cache
 C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.AssemblyInfo.cs
 C:\Users\Alkin\Source\Repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.csproj.CoreCompileInputs.cache
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\bin\Debug\net7.0-windows\Kurssss.exe
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\bin\Debug\net7.0-windows\Kurssss.deps.json
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\bin\Debug\net7.0-windows\Kurssss.runtimeconfig.json
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\bin\Debug\net7.0-windows\Kurssss.dll
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\bin\Debug\net7.0-windows\Kurssss.pdb
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.dll
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\refint\Kurssss.dll
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.pdb
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\Kurssss.genruntimeconfig.cache
+C:\Users\Alkin\source\repos\kurswork\Kurssss\Kurssss\obj\Debug\net7.0-windows\ref\Kurssss.dll

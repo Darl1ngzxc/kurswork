@@ -11,14 +11,21 @@ namespace Kurssss;
 /// </summary>
 public class AlgorithmRealization
 {
-    private Algorithm_Parameters parameters;
+    private List<Item> selectedItems = new List<Item>();
+    private int Capacity;
+
+    private KnapsackParameters parameters;
     
     private KnapsackStateStorage stateStorage;
 
     private KnapsackState currentState;
-    public AlgorithmRealization(Algorithm_Parameters parameters)
+
+    private List<Item> items;
+    public AlgorithmRealization(int capacity)
     {
-        this.parameters = parameters;
+        Capacity = capacity;
+
+        items = new List<Item>();
     }
 
     /// <summary>
@@ -27,16 +34,15 @@ public class AlgorithmRealization
     /// <returns></returns>
     public void Solve()
     {
-        List<Item> sortedItems = parameters.Items;
+        List<Item> sortedItems = items;
         sortedItems.Sort((x, y) => (y.Value / y.Weight).CompareTo(x.Value / x.Weight));
 
-        List<Item> selectedItems = new List<Item>();
         int totalWeight = 0;
         int totalValue = 0;
 
         foreach (Item item in sortedItems)
         {
-            if (totalWeight + item.Weight <= parameters.Backpack_Capacity)
+            if (totalWeight + item.Weight <= parameters.Capacity)
             {
                 selectedItems.Add(item);
                 totalWeight += item.Weight;
@@ -50,9 +56,9 @@ public class AlgorithmRealization
         currentState = new KnapsackState(selectedItems, totalWeight, totalValue);
     }
 
-    public List<KnapsackState> GetStates()      
+    public void AddItem(Item item)
     {
-        return states;
+        items.Add(item);
     }
 
 
