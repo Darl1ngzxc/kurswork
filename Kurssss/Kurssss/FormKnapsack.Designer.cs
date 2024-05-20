@@ -69,6 +69,7 @@
             // 
             // buttonAddItem
             // 
+            buttonAddItem.Enabled = false;
             buttonAddItem.Location = new Point(6, 134);
             buttonAddItem.Name = "buttonAddItem";
             buttonAddItem.Size = new Size(188, 40);

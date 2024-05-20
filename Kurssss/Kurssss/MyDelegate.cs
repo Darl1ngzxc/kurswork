@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kurssss
-{
-    internal class MyDelegate
-    {
-    }
-}
+namespace Kurssss;
+
+
+public delegate Item ItemDelegate();
+

@@ -52,6 +52,7 @@ partial class FormKnapsackInput
         // 
         // maskedTextBoxInputCapacity
         // 
+        maskedTextBoxInputCapacity.Enabled = false;
         maskedTextBoxInputCapacity.Location = new Point(10, 34);
         maskedTextBoxInputCapacity.Margin = new Padding(3, 2, 3, 2);
         maskedTextBoxInputCapacity.Mask = "00";
@@ -62,6 +63,7 @@ partial class FormKnapsackInput
         // 
         // buttonInputCapacity
         // 
+        buttonInputCapacity.Enabled = false;
         buttonInputCapacity.Location = new Point(230, 26);
         buttonInputCapacity.Margin = new Padding(3, 2, 3, 2);
         buttonInputCapacity.Name = "buttonInputCapacity";
@@ -109,6 +111,7 @@ partial class FormKnapsackInput
         // 
         // maskedTextBoxInputValue
         // 
+        maskedTextBoxInputValue.Enabled = false;
         maskedTextBoxInputValue.Location = new Point(285, 201);
         maskedTextBoxInputValue.Margin = new Padding(3, 2, 3, 2);
         maskedTextBoxInputValue.Name = "maskedTextBoxInputValue";
@@ -117,6 +120,7 @@ partial class FormKnapsackInput
         // 
         // maskedTextBoxInputWeight
         // 
+        maskedTextBoxInputWeight.Enabled = false;
         maskedTextBoxInputWeight.Location = new Point(148, 201);
         maskedTextBoxInputWeight.Margin = new Padding(3, 2, 3, 2);
         maskedTextBoxInputWeight.Name = "maskedTextBoxInputWeight";
@@ -125,6 +129,7 @@ partial class FormKnapsackInput
         // 
         // textBoxInputName
         // 
+        textBoxInputName.Enabled = false;
         textBoxInputName.Location = new Point(10, 201);
         textBoxInputName.Margin = new Padding(3, 2, 3, 2);
         textBoxInputName.Name = "textBoxInputName";
@@ -133,6 +138,7 @@ partial class FormKnapsackInput
         // 
         // buttonAddItem
         // 
+        buttonAddItem.Enabled = false;
         buttonAddItem.Location = new Point(130, 244);
         buttonAddItem.Margin = new Padding(3, 2, 3, 2);
         buttonAddItem.Name = "buttonAddItem";

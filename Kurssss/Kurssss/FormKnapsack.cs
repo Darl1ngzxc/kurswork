@@ -48,7 +48,6 @@ public partial class FormKnapsack : Form
     {
         FormKnapsackInput form = new FormKnapsackInput(EnumOperations.AddItem);
         form.Show();
-        #pragma warning disable 
         form.AddEvent(knapsackManager.AddItem);
     }
 }

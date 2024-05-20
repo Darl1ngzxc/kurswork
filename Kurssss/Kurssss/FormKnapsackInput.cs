@@ -5,7 +5,6 @@ public partial class FormKnapsackInput : System.Windows.Forms.Form
     private event Action<int>? _setSizeDelegate;
     private event Func<string, int, int, KnapsackStateStorage>? _addItemDelegate;
     private Action<EnumOperations>? _afterActionCallback;
-    private event ItemDelegate _itemDelegate;
     public FormKnapsackInput(EnumOperations actiontype)
     {
         InitializeComponent();
@@ -31,12 +30,12 @@ public partial class FormKnapsackInput : System.Windows.Forms.Form
         _setSizeDelegate += setSizeDelegate;
     }
 
-    public void AddEventItem(ItemDelegate itemDelegate)
+    public void AddEvent(Func<string, int, int, KnapsackStateStorage> addItemDelegate)
     {
-        _itemDelegate += itemDelegate;
+        _addItemDelegate += addItemDelegate;
     }
 
-   
+
 
     private void buttonInputCapacity_Click(object sender, EventArgs e)
     {
