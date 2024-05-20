@@ -19,9 +19,8 @@ public class Manager
         storage = new KnapsackStateStorage();
     }
 
-    public KnapsackStateStorage AddItem(string name, int weight, int value)
+    public KnapsackStateStorage AddItem(Item item)
     {
-        Item item = new Item(name, weight, value);
         solver.AddItem(item);
         KnapsackState state = solver.SaveKnapsackState();
         return storage;
