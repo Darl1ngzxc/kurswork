@@ -12,8 +12,10 @@ namespace Kurssss;
 public class KnapsackState
 {
     public List<Item> SelectedItems { get; set; }
-    public int TotalWeight { get; set; }
-    public int TotalValue { get; set; }
+  
+    public List<Item> UnSelectedItems { get; set; }
+
+    public int Capacity { get; set; }
 
     /// <summary>
     /// Конструктор состояния
@@ -21,10 +23,10 @@ public class KnapsackState
     /// <param name="selectedItems"></param>
     /// <param name="totalWeight"></param>
     /// <param name="totalValue"></param>
-    public KnapsackState(List<Item> selectedItems, int totalWeight, int totalValue)
+    public KnapsackState(List<Item> selectedItems, List<Item> unSelectedItems, int capacity)
     {
         SelectedItems = selectedItems;
-        TotalWeight = totalWeight;
-        TotalValue = totalValue;
+        UnSelectedItems = unSelectedItems;
+        Capacity = capacity;
     }
 }

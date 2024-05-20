@@ -12,7 +12,7 @@ namespace Kurssss;
 public class AlgorithmRealization
 {
     private List<Item> selectedItems = new List<Item>();
-    private int Capacity;
+    private int capacity;
 
     private KnapsackParameters parameters;
     
@@ -20,12 +20,12 @@ public class AlgorithmRealization
 
     private KnapsackState currentState;
 
-    private List<Item> items;
+    private List<Item> unSelecteditems;
     public AlgorithmRealization(int capacity)
     {
-        Capacity = capacity;
+        this.capacity = capacity;
 
-        items = new List<Item>();
+        unSelecteditems = new List<Item>();
     }
 
     /// <summary>
@@ -34,7 +34,7 @@ public class AlgorithmRealization
     /// <returns></returns>
     public void Solve()
     {
-        List<Item> sortedItems = items;
+        List<Item> sortedItems = unSelecteditems;
         sortedItems.Sort((x, y) => (y.Value / y.Weight).CompareTo(x.Value / x.Weight));
 
         int totalWeight = 0;
@@ -51,14 +51,16 @@ public class AlgorithmRealization
         }
     }
 
-    public void AddState(List<Item> selectedItems, int totalWeight, int totalValue)
+    public KnapsackState SaveKnapsackState()
     {
-        currentState = new KnapsackState(selectedItems, totalWeight, totalValue);
+        return new KnapsackState(selectedItems, unSelecteditems, capacity);
     }
+
+
 
     public void AddItem(Item item)
     {
-        items.Add(item);
+        unSelecteditems.Add(item);
     }
 
 

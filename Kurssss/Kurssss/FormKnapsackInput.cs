@@ -3,7 +3,7 @@ namespace Kurssss;
 public partial class FormKnapsackInput : System.Windows.Forms.Form
 {
     private event Action<int>? _setSizeDelegate;
-    private event Action<string, int, int>? _addItemDelegate;
+    private event Func<string, int, int, KnapsackStateStorage>? _addItemDelegate;
     private Action<EnumOperations>? _afterActionCallback;
     public FormKnapsackInput(EnumOperations actiontype)
     {
@@ -30,9 +30,9 @@ public partial class FormKnapsackInput : System.Windows.Forms.Form
         _setSizeDelegate += setSizeDelegate;
     }
 
-    public void AddEvent(Action<string, int, int> addItemDelegate)
+    public void AddEvent(Func<string, int, int, KnapsackStateStorage> addItemDelegate)
     {
-        _addItemDelegate += addItemDelegate;
+        _addItemDelegate += addItemDelegate; 
     }
 
    

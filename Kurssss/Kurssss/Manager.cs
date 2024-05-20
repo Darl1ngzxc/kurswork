@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kurssss;
 
-class Manager
+public class Manager
 {
     private KnapsackParameters parameters;
     private AlgorithmRealization solver;
@@ -23,7 +23,8 @@ class Manager
     {
         Item item = new Item(name, weight, value);
         solver.AddItem(item);
-
+        KnapsackState state = solver.SaveKnapsackState();
+        return storage;
     }
 
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alkin\\Source\\Repos\\kurswork\\Kurssss\\Kurssss\\Kurssss.csproj",
+      "projectUniqueName": "C:\\Users\\Alkin\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Kurssss.csproj",
       "projectName": "Kurssss",
-      "projectPath": "C:\\Users\\Alkin\\Source\\Repos\\kurswork\\Kurssss\\Kurssss\\Kurssss.csproj",
+      "projectPath": "C:\\Users\\Alkin\\source\\repos\\kurswork\\Kurssss\\Kurssss\\Kurssss.csproj",
       "packagesPath": "C:\\Users\\Alkin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alkin\\Source\\Repos\\kurswork\\Kurssss\\Kurssss\\obj\\",
+      "outputPath": "C:\\Users\\Alkin\\source\\repos\\kurswork\\Kurssss\\Kurssss\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alkin\\AppData\\Roaming\\NuGet\\NuGet.Config",

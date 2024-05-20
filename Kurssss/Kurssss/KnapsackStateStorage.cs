@@ -10,29 +10,32 @@ namespace Kurssss;
 /// <summary>
 /// Класс-Хранилище
 /// </summary>
-class KnapsackStateStorage
+public class KnapsackStateStorage
 {
-    private List<KnapsackState> states;
+    
 
+    private List<KnapsackState> _knapsackStorage;
     public KnapsackStateStorage()
     {
-        states = new List<KnapsackState>();
+
+        _knapsackStorage = new List<KnapsackState>();
     }
 
     public void AddState(KnapsackState state)
     {
-        states.Add(state);
+        if (state == null)
+        {
+            return;
+        }
+        _knapsackStorage.Add(state);
     }
 
-    public void Reset()
-    {
-        states.Clear();
-    }
+    
 
-    public List<KnapsackState> GetStates()
-    {
-        return states;
-    }
+    //public List<KnapsackState> GetStates()
+    //{
+    //    return states;
+    //}
 
     //public void SaveToFile(string fileName)
     //{
