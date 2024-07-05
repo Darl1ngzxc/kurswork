@@ -30,9 +30,10 @@ public partial class FormKnapsackInput : System.Windows.Forms.Form
         _setSizeDelegate += setSizeDelegate;
     }
 
-    public void AddEvent(Func<string, int, int, KnapsackStateStorage> addItemDelegate)
+    public void AddEvent(Func<string, int, int, KnapsackStateStorage> addItemDelegate, Action<EnumOperations> afterActionCallback)
     {
         _addItemDelegate += addItemDelegate;
+        _afterActionCallback = afterActionCallback;
     }
 
 
@@ -67,9 +68,10 @@ public partial class FormKnapsackInput : System.Windows.Forms.Form
             int weight = Convert.ToInt32(maskedTextBoxInputWeight.Text);
             int value = Convert.ToInt32(maskedTextBoxInputValue.Text);
             _addItemDelegate?.Invoke(name, weight, value);
+            _afterActionCallback?.Invoke(EnumOperations.AddItem);
             Close();
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             MessageBox.Show("¬ведите все параметры", "ќшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

@@ -30,7 +30,18 @@
         {
             pictureBox = new PictureBox();
             groupBoxTools = new GroupBox();
-            button1 = new Button();
+            labelStep = new Label();
+            labelSelectedValue = new Label();
+            labelSelectedWeight = new Label();
+            labelCapacity = new Label();
+            textBoxStep = new TextBox();
+            textBoxSelectedValue = new TextBox();
+            textBoxSelectedWeight = new TextBox();
+            textBoxCapacity = new TextBox();
+            buttonSolve = new Button();
+            buttonStepBack = new Button();
+            buttonStepNext = new Button();
+            buttonInformation = new Button();
             buttonAddItem = new Button();
             buttonSetCapacity = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
@@ -39,40 +50,151 @@
             // 
             // pictureBox
             // 
-            pictureBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            pictureBox.Location = new Point(1, 0);
+            pictureBox.Dock = DockStyle.Fill;
+            pictureBox.Location = new Point(0, 0);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(735, 592);
+            pictureBox.Size = new Size(1077, 619);
             pictureBox.TabIndex = 0;
             pictureBox.TabStop = false;
             // 
             // groupBoxTools
             // 
-            groupBoxTools.Controls.Add(button1);
+            groupBoxTools.BackColor = SystemColors.Control;
+            groupBoxTools.Controls.Add(labelStep);
+            groupBoxTools.Controls.Add(labelSelectedValue);
+            groupBoxTools.Controls.Add(labelSelectedWeight);
+            groupBoxTools.Controls.Add(labelCapacity);
+            groupBoxTools.Controls.Add(textBoxStep);
+            groupBoxTools.Controls.Add(textBoxSelectedValue);
+            groupBoxTools.Controls.Add(textBoxSelectedWeight);
+            groupBoxTools.Controls.Add(textBoxCapacity);
+            groupBoxTools.Controls.Add(buttonSolve);
+            groupBoxTools.Controls.Add(buttonStepBack);
+            groupBoxTools.Controls.Add(buttonStepNext);
+            groupBoxTools.Controls.Add(buttonInformation);
             groupBoxTools.Controls.Add(buttonAddItem);
             groupBoxTools.Controls.Add(buttonSetCapacity);
-            groupBoxTools.Location = new Point(742, 0);
+            groupBoxTools.Dock = DockStyle.Right;
+            groupBoxTools.Location = new Point(912, 0);
             groupBoxTools.Name = "groupBoxTools";
-            groupBoxTools.Size = new Size(200, 592);
+            groupBoxTools.Size = new Size(165, 619);
             groupBoxTools.TabIndex = 1;
             groupBoxTools.TabStop = false;
             groupBoxTools.Text = "Инструменты";
             // 
-            // button1
+            // labelStep
             // 
-            button1.Location = new Point(6, 180);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 40);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            labelStep.AutoSize = true;
+            labelStep.Location = new Point(7, 383);
+            labelStep.Name = "labelStep";
+            labelStep.Size = new Size(84, 15);
+            labelStep.TabIndex = 13;
+            labelStep.Text = "Текущий шаг:";
+            // 
+            // labelSelectedValue
+            // 
+            labelSelectedValue.AutoSize = true;
+            labelSelectedValue.Location = new Point(6, 330);
+            labelSelectedValue.Name = "labelSelectedValue";
+            labelSelectedValue.Size = new Size(158, 15);
+            labelSelectedValue.TabIndex = 12;
+            labelSelectedValue.Text = "Цена предметов в рюкзаке:";
+            // 
+            // labelSelectedWeight
+            // 
+            labelSelectedWeight.AutoSize = true;
+            labelSelectedWeight.Location = new Point(6, 275);
+            labelSelectedWeight.Name = "labelSelectedWeight";
+            labelSelectedWeight.Size = new Size(149, 15);
+            labelSelectedWeight.TabIndex = 11;
+            labelSelectedWeight.Text = "Вес предметов в рюкзаке:";
+            // 
+            // labelCapacity
+            // 
+            labelCapacity.AutoSize = true;
+            labelCapacity.Location = new Point(6, 222);
+            labelCapacity.Name = "labelCapacity";
+            labelCapacity.Size = new Size(83, 15);
+            labelCapacity.TabIndex = 10;
+            labelCapacity.Text = "Вместимость:";
+            // 
+            // textBoxStep
+            // 
+            textBoxStep.Location = new Point(7, 410);
+            textBoxStep.Name = "textBoxStep";
+            textBoxStep.Size = new Size(125, 23);
+            textBoxStep.TabIndex = 9;
+            // 
+            // textBoxSelectedValue
+            // 
+            textBoxSelectedValue.Location = new Point(6, 357);
+            textBoxSelectedValue.Name = "textBoxSelectedValue";
+            textBoxSelectedValue.Size = new Size(125, 23);
+            textBoxSelectedValue.TabIndex = 8;
+            // 
+            // textBoxSelectedWeight
+            // 
+            textBoxSelectedWeight.Location = new Point(7, 304);
+            textBoxSelectedWeight.Name = "textBoxSelectedWeight";
+            textBoxSelectedWeight.Size = new Size(125, 23);
+            textBoxSelectedWeight.TabIndex = 7;
+            // 
+            // textBoxCapacity
+            // 
+            textBoxCapacity.Location = new Point(6, 249);
+            textBoxCapacity.Name = "textBoxCapacity";
+            textBoxCapacity.Size = new Size(125, 23);
+            textBoxCapacity.TabIndex = 6;
+            // 
+            // buttonSolve
+            // 
+            buttonSolve.Enabled = false;
+            buttonSolve.Location = new Point(7, 439);
+            buttonSolve.Name = "buttonSolve";
+            buttonSolve.Size = new Size(148, 50);
+            buttonSolve.TabIndex = 5;
+            buttonSolve.Text = "Решить задачу";
+            buttonSolve.UseVisualStyleBackColor = true;
+            buttonSolve.Click += buttonSolve_Click;
+            // 
+            // buttonStepBack
+            // 
+            buttonStepBack.Enabled = false;
+            buttonStepBack.Location = new Point(7, 553);
+            buttonStepBack.Name = "buttonStepBack";
+            buttonStepBack.Size = new Size(146, 51);
+            buttonStepBack.TabIndex = 4;
+            buttonStepBack.Text = "Шаг назад";
+            buttonStepBack.UseVisualStyleBackColor = true;
+            buttonStepBack.Click += buttonStepBack_Click;
+            // 
+            // buttonStepNext
+            // 
+            buttonStepNext.Enabled = false;
+            buttonStepNext.Location = new Point(6, 495);
+            buttonStepNext.Name = "buttonStepNext";
+            buttonStepNext.Size = new Size(147, 52);
+            buttonStepNext.TabIndex = 3;
+            buttonStepNext.Text = "Шаг вперед";
+            buttonStepNext.UseVisualStyleBackColor = true;
+            buttonStepNext.Click += buttonStepNext_Click;
+            // 
+            // buttonInformation
+            // 
+            buttonInformation.Location = new Point(7, 151);
+            buttonInformation.Name = "buttonInformation";
+            buttonInformation.Size = new Size(146, 66);
+            buttonInformation.TabIndex = 2;
+            buttonInformation.Text = "Информация";
+            buttonInformation.UseVisualStyleBackColor = true;
+            buttonInformation.Click += buttonInformation_Click;
             // 
             // buttonAddItem
             // 
             buttonAddItem.Enabled = false;
-            buttonAddItem.Location = new Point(6, 134);
+            buttonAddItem.Location = new Point(6, 79);
             buttonAddItem.Name = "buttonAddItem";
-            buttonAddItem.Size = new Size(188, 40);
+            buttonAddItem.Size = new Size(147, 66);
             buttonAddItem.TabIndex = 1;
             buttonAddItem.Text = "Добавить предмет";
             buttonAddItem.UseVisualStyleBackColor = true;
@@ -82,7 +204,7 @@
             // 
             buttonSetCapacity.Location = new Point(6, 22);
             buttonSetCapacity.Name = "buttonSetCapacity";
-            buttonSetCapacity.Size = new Size(188, 34);
+            buttonSetCapacity.Size = new Size(147, 51);
             buttonSetCapacity.TabIndex = 0;
             buttonSetCapacity.Text = "Задать вместимость рюкзака";
             buttonSetCapacity.UseVisualStyleBackColor = true;
@@ -92,13 +214,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(957, 594);
+            ClientSize = new Size(1077, 619);
             Controls.Add(groupBoxTools);
             Controls.Add(pictureBox);
             Name = "FormKnapsack";
             Text = "FormKnapsack";
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             groupBoxTools.ResumeLayout(false);
+            groupBoxTools.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -107,7 +230,18 @@
         private PictureBox pictureBox;
         private GroupBox groupBoxTools;
         private Button buttonSetCapacity;
-        private Button button1;
+        private Button buttonInformation;
         private Button buttonAddItem;
+        private Button buttonStepBack;
+        private Button buttonStepNext;
+        private Button buttonSolve;
+        private TextBox textBoxStep;
+        private TextBox textBoxSelectedValue;
+        private TextBox textBoxSelectedWeight;
+        private TextBox textBoxCapacity;
+        private Label labelStep;
+        private Label labelSelectedValue;
+        private Label labelSelectedWeight;
+        private Label labelCapacity;
     }
 }

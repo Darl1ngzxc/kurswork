@@ -11,5 +11,8 @@ public enum EnumOperations
     AddItem,
     Remove,
     SetCapacity,
+    StepNext,
+    StepBack,
+    Solve,
     None,
 }

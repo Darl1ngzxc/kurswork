@@ -12,15 +12,18 @@ namespace Kurssss;
 public class AlgorithmRealization
 {
     private List<Item> selectedItems = new List<Item>();
+
+    private List<Item> unSelecteditems;
+
     private int capacity;
+
+    private int selectedWeight = 0;
 
     private KnapsackParameters parameters;
     
-    private KnapsackStateStorage stateStorage;
+    
 
-    private KnapsackState currentState;
 
-    private List<Item> unSelecteditems;
     public AlgorithmRealization(int capacity)
     {
         this.capacity = capacity;
@@ -32,28 +35,35 @@ public class AlgorithmRealization
     /// Жадный алгоритм
     /// </summary>
     /// <returns></returns>
-    public void Solve()
+    public void StepSolve()
     {
         List<Item> sortedItems = unSelecteditems;
+
         sortedItems.Sort((x, y) => (y.Value / y.Weight).CompareTo(x.Value / x.Weight));
+        unSelecteditems = sortedItems;
 
-        int totalWeight = 0;
-        int totalValue = 0;
+        selectedWeight += sortedItems[0].Weight;
 
-        foreach (Item item in sortedItems)
-        {
-            if (totalWeight + item.Weight <= parameters.Capacity)
-            {
-                selectedItems.Add(item);
-                totalWeight += item.Weight;
-                totalValue += item.Value;
-            }
-        }
+        selectedItems.Add(sortedItems[0]);
+    
+       // sortedItems.RemoveAt(0);
+        unSelecteditems.RemoveAt(0);
+    }
+
+    public void SetState(KnapsackState state)
+    {
+        selectedItems = state.SelectedItems;
+        unSelecteditems = state.UnSelectedItems;
+        capacity = state.Capacity;
+        selectedWeight = state.SelectedWeight;
     }
 
     public KnapsackState SaveKnapsackState()
     {
-        return new KnapsackState(selectedItems, unSelecteditems, capacity);
+        var selCopy = new List<Item>(selectedItems);
+        var unSelCopy = new List<Item>(unSelecteditems);
+
+        return new KnapsackState(selCopy, unSelCopy, capacity, selectedWeight);
     }
 
 

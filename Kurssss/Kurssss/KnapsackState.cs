@@ -17,16 +17,29 @@ public class KnapsackState
 
     public int Capacity { get; set; }
 
+    public int SelectedWeight { get; set; }
+
     /// <summary>
     /// Конструктор состояния
     /// </summary>
     /// <param name="selectedItems"></param>
     /// <param name="totalWeight"></param>
     /// <param name="totalValue"></param>
-    public KnapsackState(List<Item> selectedItems, List<Item> unSelectedItems, int capacity)
+    public KnapsackState(List<Item> selectedItems, List<Item> unSelectedItems, int capacity, int selectedWeight)
     {
         SelectedItems = selectedItems;
         UnSelectedItems = unSelectedItems;
         Capacity = capacity;
+        SelectedWeight = selectedWeight;
+    }
+
+    public int GetSelectedValue()
+    {
+        int SelectedValue = 0;
+        foreach(Item item in SelectedItems)
+        {
+            SelectedValue += item.Value;
+        }
+        return SelectedValue;
     }
 }

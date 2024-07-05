@@ -114,18 +114,22 @@ partial class FormKnapsackInput
         maskedTextBoxInputValue.Enabled = false;
         maskedTextBoxInputValue.Location = new Point(285, 201);
         maskedTextBoxInputValue.Margin = new Padding(3, 2, 3, 2);
+        maskedTextBoxInputValue.Mask = "000";
         maskedTextBoxInputValue.Name = "maskedTextBoxInputValue";
         maskedTextBoxInputValue.Size = new Size(110, 23);
         maskedTextBoxInputValue.TabIndex = 7;
+        maskedTextBoxInputValue.ValidatingType = typeof(int);
         // 
         // maskedTextBoxInputWeight
         // 
         maskedTextBoxInputWeight.Enabled = false;
         maskedTextBoxInputWeight.Location = new Point(148, 201);
         maskedTextBoxInputWeight.Margin = new Padding(3, 2, 3, 2);
+        maskedTextBoxInputWeight.Mask = "00";
         maskedTextBoxInputWeight.Name = "maskedTextBoxInputWeight";
         maskedTextBoxInputWeight.Size = new Size(110, 23);
         maskedTextBoxInputWeight.TabIndex = 8;
+        maskedTextBoxInputWeight.ValidatingType = typeof(int);
         // 
         // textBoxInputName
         // 

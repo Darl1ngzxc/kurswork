@@ -20,6 +20,5 @@ public class KnapsackParameters
     public KnapsackParameters(int capacity)
     {
         Capacity = capacity;
-        
     }
 }

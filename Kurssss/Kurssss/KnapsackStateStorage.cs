@@ -14,11 +14,10 @@ public class KnapsackStateStorage
 {
     
 
-    private List<KnapsackState> _knapsackStorage;
+    private List<KnapsackState> _storage;
     public KnapsackStateStorage()
     {
-
-        _knapsackStorage = new List<KnapsackState>();
+        _storage = new List<KnapsackState>();
     }
 
     public void AddState(KnapsackState state)
@@ -27,10 +26,26 @@ public class KnapsackStateStorage
         {
             return;
         }
-        _knapsackStorage.Add(state);
+        if (_storage.Count > 0 && _storage.Last().Equals(state))
+        {
+            _storage.RemoveAt(_storage.Count - 1);
+        }
+        _storage.Add(state);
     }
 
-    
+    public KnapsackState GetState(int index)
+    {
+        if (_storage[index] == null || index < 0)
+        {
+            throw new IndexOutOfRangeException();
+        }
+        return _storage[index];
+    }
+
+    public int GetStorageLenght()
+    {
+        return _storage.Count;
+    } 
 
     //public List<KnapsackState> GetStates()
     //{
