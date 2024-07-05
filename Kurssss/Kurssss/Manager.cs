@@ -8,7 +8,7 @@ namespace Kurssss;
 
 public class Manager
 {
-    private KnapsackParameters parameters;
+    
     private AlgorithmRealization solver;
     private KnapsackStateStorage storage;
     public KnapsackStateStorage GetStorage() { return storage; }
@@ -35,7 +35,7 @@ public class Manager
         List<Item> items = new List<Item>(storage.GetState(currentStep).UnSelectedItems);
         items.Sort((x, y) => (y.Value / y.Weight).CompareTo(x.Value / x.Weight));
         while (storage.GetState(currentStep).SelectedWeight + items[0].Weight 
-            < storage.GetState(currentStep).Capacity)
+            <= storage.GetState(currentStep).Capacity)
         {
             
             currentStep++;
@@ -51,5 +51,4 @@ public class Manager
         }
         return storage;
     }
-
 }

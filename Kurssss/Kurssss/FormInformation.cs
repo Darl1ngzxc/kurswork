@@ -8,13 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CourseWork
+namespace CourseWork;
+
+public partial class FormInformation : Form
 {
-    public partial class FormInformation : Form
+    public FormInformation()
     {
-        public FormInformation()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

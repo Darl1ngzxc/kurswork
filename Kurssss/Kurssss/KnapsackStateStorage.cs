@@ -12,7 +12,7 @@ namespace Kurssss;
 /// </summary>
 public class KnapsackStateStorage
 {
-    
+
 
     private List<KnapsackState> _storage;
     public KnapsackStateStorage()
@@ -45,28 +45,5 @@ public class KnapsackStateStorage
     public int GetStorageLenght()
     {
         return _storage.Count;
-    } 
-
-    //public List<KnapsackState> GetStates()
-    //{
-    //    return states;
-    //}
-
-    //public void SaveToFile(string fileName)
-    //{
-    //    using (FileStream fs = new FileStream(fileName, FileMode.Create))
-    //    {
-    //        BinaryFormatter formatter = new BinaryFormatter();
-    //        formatter.Serialize(fs, states);
-    //    }
-    //}
-
-    //public void LoadFromFile(string fileName)
-    //{
-    //    using (FileStream fs = new FileStream(fileName, FileMode.Open))
-    //    {
-    //        BinaryFormatter formatter = new BinaryFormatter();
-    //        states = (List<KnapsackState>)formatter.Deserialize(fs);
-    //    }
-    //}
+    }
 }

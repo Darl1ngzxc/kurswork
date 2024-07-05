@@ -46,7 +46,7 @@ public partial class FormKnapsack : Form
         }
         Bitmap bitmap = new(pictureBox.Width, pictureBox.Height);
         Graphics graphics = Graphics.FromImage(bitmap);
-        graphics.Clear(Color.FromArgb(255, 224, 192));
+        graphics.Clear(Color.FromArgb(150, 190, 255));
         Pen pen = new Pen(Color.Black);
         Brush brush = new SolidBrush(Color.Black);
         graphics.DrawLine(pen, 500, 0, 500, 1000);

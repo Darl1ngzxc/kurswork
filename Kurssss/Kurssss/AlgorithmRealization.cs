@@ -72,6 +72,4 @@ public class AlgorithmRealization
     {
         unSelecteditems.Add(item);
     }
-
-
 }
