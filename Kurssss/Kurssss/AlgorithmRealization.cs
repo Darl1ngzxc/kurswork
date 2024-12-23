@@ -55,7 +55,7 @@ public class AlgorithmRealization
         selectedItems = state.SelectedItems;
         unSelecteditems = state.UnSelectedItems;
         capacity = state.Capacity;
-        selectedWeight = state.SelectedWeight;
+       // selectedWeight = state.SelectedWeight;
     }
 
     public KnapsackState SaveKnapsackState()

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,12 +15,23 @@ public class Manager
     private KnapsackStateStorage storage;
     public KnapsackStateStorage GetStorage() { return storage; }
 
+    public void SetSavedState(KnapsackState state)
+    {
+        solver.SetState(state);
+        storage.AddState(state);  // Сохранение состояния в хранилище, если нужно
+    }
+
     public Manager(KnapsackParameters parameters)
     {
         solver = new AlgorithmRealization(parameters.Capacity);
         storage = new KnapsackStateStorage();
         KnapsackState state = solver.SaveKnapsackState();
         storage.AddState(state);
+    }
+
+    public void InitializeKnapsack(int size)
+    {
+        solver = new AlgorithmRealization(size);
     }
 
     public KnapsackStateStorage AddItem(string name, int weight, int value)
@@ -31,7 +44,9 @@ public class Manager
     }
 
     public KnapsackStateStorage ResultSolve(int currentStep)
-    {   
+    {
+        int savedstep = currentStep;
+        KnapsackState savedState = storage._storage[currentStep].Clone();
         List<Item> items = new List<Item>(storage.GetState(currentStep).UnSelectedItems);
         items.Sort((x, y) => (y.Value / y.Weight).CompareTo(x.Value / x.Weight));
         while (storage.GetState(currentStep).SelectedWeight + items[0].Weight 
@@ -46,9 +61,15 @@ public class Manager
             if (storage.GetState(currentStep).UnSelectedItems.Count == 0)
             {
                 break;
-            }
-            
+            }         
         }
+        storage._storage[savedstep] = savedState;
         return storage;
+    }
+
+
+    public void SetKnapsackState(KnapsackState state)
+    {
+        solver.SetState(state);
     }
 }

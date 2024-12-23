@@ -44,16 +44,23 @@
             buttonInformation = new Button();
             buttonAddItem = new Button();
             buttonSetCapacity = new Button();
+            menuStrip1 = new MenuStrip();
+            файлToolStripMenuItem = new ToolStripMenuItem();
+            SaveToolStripMenuItem = new ToolStripMenuItem();
+            LoadToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBoxTools.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
+            saveFileDialog = new OpenFileDialog();
+            openFileDialog = new OpenFileDialog();
             // 
             // pictureBox
             // 
             pictureBox.Dock = DockStyle.Fill;
-            pictureBox.Location = new Point(0, 0);
+            pictureBox.Location = new Point(0, 24);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(1077, 619);
+            pictureBox.Size = new Size(1077, 595);
             pictureBox.TabIndex = 0;
             pictureBox.TabStop = false;
             // 
@@ -75,9 +82,9 @@
             groupBoxTools.Controls.Add(buttonAddItem);
             groupBoxTools.Controls.Add(buttonSetCapacity);
             groupBoxTools.Dock = DockStyle.Right;
-            groupBoxTools.Location = new Point(912, 0);
+            groupBoxTools.Location = new Point(912, 24);
             groupBoxTools.Name = "groupBoxTools";
-            groupBoxTools.Size = new Size(165, 619);
+            groupBoxTools.Size = new Size(165, 595);
             groupBoxTools.TabIndex = 1;
             groupBoxTools.TabStop = false;
             groupBoxTools.Text = "Инструменты";
@@ -210,6 +217,38 @@
             buttonSetCapacity.UseVisualStyleBackColor = true;
             buttonSetCapacity.Click += buttonSetCapacity_Click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1077, 24);
+            menuStrip1.TabIndex = 2;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // файлToolStripMenuItem
+            // 
+            файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { SaveToolStripMenuItem, LoadToolStripMenuItem });
+            файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            файлToolStripMenuItem.Size = new Size(48, 20);
+            файлToolStripMenuItem.Text = "Файл";
+            // 
+            // SaveToolStripMenuItem
+            // 
+            SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
+            SaveToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
+            SaveToolStripMenuItem.Size = new Size(180, 22);
+            SaveToolStripMenuItem.Text = "Сохранить";
+            SaveToolStripMenuItem.Click += SaveToolStripMenuItem_Click;
+            // 
+            // LoadToolStripMenuItem
+            // 
+            LoadToolStripMenuItem.Name = "LoadToolStripMenuItem";
+            LoadToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.L;
+            LoadToolStripMenuItem.Size = new Size(180, 22);
+            LoadToolStripMenuItem.Text = "Загрузить";
+            LoadToolStripMenuItem.Click += LoadToolStripMenuItem_Click;
+            // 
             // FormKnapsack
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -217,12 +256,17 @@
             ClientSize = new Size(1077, 619);
             Controls.Add(groupBoxTools);
             Controls.Add(pictureBox);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "FormKnapsack";
             Text = "FormKnapsack";
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             groupBoxTools.ResumeLayout(false);
             groupBoxTools.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -243,5 +287,11 @@
         private Label labelSelectedValue;
         private Label labelSelectedWeight;
         private Label labelCapacity;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem файлToolStripMenuItem;
+        private ToolStripMenuItem SaveToolStripMenuItem;
+        private ToolStripMenuItem LoadToolStripMenuItem;
+        private OpenFileDialog saveFileDialog;
+        private OpenFileDialog openFileDialog;
     }
 }

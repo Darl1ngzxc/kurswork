@@ -1,0 +1,6 @@
+StateStart
+Capacity:41
+SelectedWeight:0
+SelectedItems:
+UnSelectedItems:
+StateEnd

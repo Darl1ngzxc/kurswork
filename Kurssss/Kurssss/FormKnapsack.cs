@@ -14,6 +14,7 @@ namespace Kurssss;
 
 public partial class FormKnapsack : Form
 {
+    private KnapsackState savedState;
     private Manager knapsackManager;
     private KnapsackVisualization knapsackVisualization;
     private int currentStateStep = 0;
@@ -21,7 +22,7 @@ public partial class FormKnapsack : Form
 
     private void CreateKnapsackManager(int capacity)
     {
-        
+
         KnapsackParameters parameters = new KnapsackParameters(capacity);
         knapsackManager = new Manager(parameters);
         Show(currentStateStep);
@@ -30,6 +31,15 @@ public partial class FormKnapsack : Form
         buttonAddItem.Enabled = true;
         buttonSetCapacity.Enabled = true;
         textBoxCapacity.Text = knapsackManager.GetStorage().GetState(currentStateStep).Capacity.ToString();
+    }
+
+    private void InitializeKnapsackManagerIfNeeded()
+    {
+        if (knapsackManager == null)
+        {
+            // Инициализируем knapsackManager, если он не был инициализирован
+            knapsackManager = new Manager(new KnapsackParameters(100));  // Параметр 100 — это пример, можно заменить на нужное значение
+        }
     }
 
     public FormKnapsack()
@@ -95,6 +105,8 @@ public partial class FormKnapsack : Form
 
     private void buttonSolve_Click(object sender, EventArgs e)
     {
+        int currentstep = currentStateStep;
+        savedState = knapsackManager.GetStorage().GetState(currentstep);
         knapsackManager.ResultSolve(currentStateStep);
         currentStateStep = knapsackManager.GetStorage().GetStorageLenght() - 1;
         Show(currentStateStep);
@@ -104,6 +116,49 @@ public partial class FormKnapsack : Form
         buttonSolve.Enabled = false;
         textBoxSelectedWeight.Text = knapsackManager.GetStorage().GetState(currentStateStep).SelectedWeight.ToString();
         textBoxSelectedValue.Text = knapsackManager.GetStorage().GetState(currentStateStep).GetSelectedValue().ToString();
+        
+        while (currentStateStep > 0)
+        {
+            currentStateStep--;
+            Show(currentStateStep);
+            buttonSolve.Enabled = false;
+            buttonAddItem.Enabled = false;
+            buttonStepNext.Enabled = true;
+            if (currentStateStep == 0)
+            {
+                buttonStepBack.Enabled = false;
+            }
+            textBoxStep.Text = currentStateStep.ToString();
+            textBoxSelectedWeight.Text = knapsackManager.GetStorage().GetState(currentStateStep).SelectedWeight.ToString();
+            textBoxSelectedValue.Text = knapsackManager.GetStorage().GetState(currentStateStep).GetSelectedValue().ToString();
+        }
+        while (buttonStepNext.Enabled = true)
+        {
+            try
+            {
+
+
+                currentStateStep++;
+                Show(currentStateStep);
+                if (currentStateStep == knapsackManager.GetStorage().GetStorageLenght() - 1)
+                {
+                    buttonStepNext.Enabled = false;
+                    if (isSolved == false)
+                    {
+                        buttonSolve.Enabled = true;
+                    }
+                }
+
+                buttonStepBack.Enabled = true;
+                textBoxStep.Text = currentStateStep.ToString();
+                textBoxSelectedWeight.Text = knapsackManager.GetStorage().GetState(currentStateStep).SelectedWeight.ToString();
+                textBoxSelectedValue.Text = knapsackManager.GetStorage().GetState(currentStateStep).GetSelectedValue().ToString();
+            }
+            catch
+            {
+                return;
+            }
+        }
     }
 
     private void buttonStepNext_Click(object sender, EventArgs e)
@@ -113,12 +168,12 @@ public partial class FormKnapsack : Form
         if (currentStateStep == knapsackManager.GetStorage().GetStorageLenght() - 1)
         {
             buttonStepNext.Enabled = false;
-            if (isSolved ==  false)
+            if (isSolved == false)
             {
                 buttonSolve.Enabled = true;
             }
         }
-        
+
         buttonStepBack.Enabled = true;
         textBoxStep.Text = currentStateStep.ToString();
         textBoxSelectedWeight.Text = knapsackManager.GetStorage().GetState(currentStateStep).SelectedWeight.ToString();
@@ -140,4 +195,117 @@ public partial class FormKnapsack : Form
         textBoxSelectedWeight.Text = knapsackManager.GetStorage().GetState(currentStateStep).SelectedWeight.ToString();
         textBoxSelectedValue.Text = knapsackManager.GetStorage().GetState(currentStateStep).GetSelectedValue().ToString();
     }
+
+    private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Text Files (*.txt)|*.txt",
+                DefaultExt = "txt",
+                AddExtension = true
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                knapsackManager.GetStorage().SaveToFile(saveFileDialog.FileName);
+                MessageBox.Show("Состояние успешно сохранено!", "Сохранение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    private void LoadToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        isSolved = false;
+        if (openFileDialog.ShowDialog() == DialogResult.OK)
+        {
+            try
+            {
+                knapsackManager = new Manager(new KnapsackParameters(100));
+                knapsackManager.GetStorage().LoadFromFile(openFileDialog.FileName);
+
+                if (knapsackManager.GetStorage().Count > 0)
+                {
+                    var lastStateIndex = knapsackManager.GetStorage().GetStorageLenght() - 1;
+                    var lastState = knapsackManager.GetStorage().GetState(lastStateIndex);
+
+                    // Обновите knapsackManager с данными из последнего состояния
+                    knapsackManager.InitializeKnapsack(lastState.Capacity);
+                    knapsackManager.SetKnapsackState(lastState);
+
+                    currentStateStep = lastStateIndex;
+                    textBoxCapacity.Text = lastState.Capacity.ToString();
+                    Show(currentStateStep);
+
+                    textBoxStep.Text = currentStateStep.ToString();
+                    textBoxSelectedValue.Text = lastState.GetSelectedValue().ToString();
+                    textBoxSelectedWeight.Text = lastState.SelectedWeight.ToString();
+                }
+
+                MessageBox.Show("Загрузка прошла успешно", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        buttonSetCapacity.Enabled = false;
+        buttonStepNext.Enabled = true;
+        buttonStepBack.Enabled = true;
+
+        currentStateStep--;
+        Show(currentStateStep);
+        buttonSolve.Enabled = false;
+        buttonAddItem.Enabled = false;
+        buttonStepNext.Enabled = true;
+        if (currentStateStep == 0)
+        {
+            buttonStepBack.Enabled = false;
+        }
+        textBoxStep.Text = currentStateStep.ToString();
+        textBoxSelectedWeight.Text = knapsackManager.GetStorage().GetState(currentStateStep).SelectedWeight.ToString();
+        textBoxSelectedValue.Text = knapsackManager.GetStorage().GetState(currentStateStep).GetSelectedValue().ToString();
+
+        while (currentStateStep < knapsackManager.GetStorage().GetStorageLenght() - 1)
+        {
+            currentStateStep++;
+            Show(currentStateStep);
+            if (currentStateStep == knapsackManager.GetStorage().GetStorageLenght() - 1)
+            {
+                buttonStepNext.Enabled = false;
+                if (isSolved == false)
+                {
+                    buttonSolve.Enabled = true;
+                }
+            }
+
+            buttonStepBack.Enabled = true;
+            textBoxStep.Text = currentStateStep.ToString();
+            textBoxSelectedWeight.Text = knapsackManager.GetStorage().GetState(currentStateStep).SelectedWeight.ToString();
+            textBoxSelectedValue.Text = knapsackManager.GetStorage().GetState(currentStateStep).GetSelectedValue().ToString();
+
+            int countUnSelectedItems = 0;
+            int countUnSelectedItemsOutOfRange = 0;
+            foreach (var x in knapsackManager.GetStorage().GetState(currentStateStep).UnSelectedItems)
+            {
+                countUnSelectedItems++;
+                if (x.Weight > knapsackManager.GetStorage().GetState(currentStateStep).Capacity)
+                {
+                    countUnSelectedItemsOutOfRange++;
+                }
+            }
+            if (countUnSelectedItems == countUnSelectedItemsOutOfRange)
+            {
+                buttonSolve.Enabled = false;
+                isSolved = true;
+            }
+        }
+    }
+    
 }
